@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Here you can find the best food in Craiova. We have a lot of restaurants from Craiova 
+    with a lot of quality food for your taste!" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Mancare </title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="navbar-brand"><span>Let's Eat</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" id="aboutbtn">About</a></li>
+                <li><a href="#contacts">Contact</a></li>
+            </ul>
+            <button class="navbar-toggler" role="button">
+                <span></span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <div class="chef">
+            <img src="img/chef.jpg" alt="Logo">
+        </div>
+        <section class="daily_container">
+            <h1 class="container center">Esti din Craiova si nu stii ce sa mananci? Aici ai recomandarile noastre!</h1>
+            <div class="grid-container container">
+                <div class="grid-item">
+                    <h2> <i class="fas fa-tag"></i>Vă recomandăm</h2>
+                    <div class="daily-text">
+                        <a href="restaurant-natural.html">
+                            <h3>Ciorba de perisoare</h3>
+                            <p>350g</p>
+                            <div class="daily-bottom-bar">
+                                <h3>5,9 RON</h3>
+                                <h3>Restaurant Natural</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <h2> <i class="fas fa-tag"></i>Vă recomandăm</h2>
+                    <div class="daily-text">
+                        <a href="la-Rocca.html">
+                            <h3>Pizza carbonara</h3>
+                            <p>Blat, Sunca, Bacon, sos alb - 350g
+                                <br>
+                                Oferta: La 2 pizza cumparate o sa primiti o pizza Vegetariana gratis!
+                            </p>
+                            <div class="daily-bottom-bar">
+                                <h3>17.99 RON </h3>
+                                <h3>La Rocca</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <h2 id="dtc"> <i class="fab fa-hotjar"></i> Produsul zilei</h2>
+                    <div class="daily-text">
+                        <a href="la-Rocca.html">
+                            <h3>Spaghete carbonara</h3>
+                            <p>Spaghete, smantana - 200 gr</p>
+                            <div class="daily-bottom-bar">
+                                <h3>10.99 RON</h3>
+                                <h3>La Rocca</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow">
+                <button class="arrow-slider" onclick="plusDivs(-1)" role="slider">&#10094;</button>
+                <button class="arrow-slider" onclick="plusDivs(1)" role="slider">&#10095;</button>
+            </div>
+        </section>
+        <section class="sortimente-container">
+            <h1 class="center">Cauta un restaurantul dupa preferinte!</h1>
+            <div class="sortimente-widget">
+                <button id="search-restaurant" class="search-icon" role="button">Cauta restaurantul preferat</button>
+                <button id="search-sortimente" class="search-icon" role="button">Cauta sortiment de mancare</button>
+            </div>
+            <div class="search-wrapper">
+                <form autocomplete="off">
+                    <input type="text" id="Search" name="focus" required class="search-box"
+                        placeholder="Cauta restaurant" />
+                    <input type="text" id="Search_sortiment" name="focus" required class="search-box"
+                        placeholder="Cauta sortiment mancare" />
+                </form>
+            </div>
+        </section>
+        <section class="container">
+            <h1 class="center">Alege restaturantul preferat!</h1>
+            <div class="restaurante-container">
+                <a href="restaurant-natural.html" class="restaurante-item rest-div ">
+                    <img src="img/prim.jpg" alt="Restaurant natural">
+                    <h2 class="rest-name ">Restaurant natural</h2>
+                    <p class="rest-sortiment">traditionala</p>
+                </a>
+                <a href="Orezari.html" class="restaurante-item rest-div">
+                    <img src="img/japanese.jpg" alt="Orezari">
+                    <h2 class="rest-name">Orezari</h2>
+                    <p class="rest-sortiment">Internationala, Carne, sushi</p>
+                </a>
+                <a href="la-Rocca.html" class="restaurante-item rest-div">
+                    <img src="img/pizzar.jpg" alt="La rocca">
+                    <h2 class="rest-name">La rocca</h2>
+                    <p class="rest-sortiment">Pizza, Gratar, Desert</p>
+                </a>
+                <a href="barbeque.html" class="restaurante-item rest-div">
+                    <img src="img/bbq.jpg" alt="Barbeque">
+                    <h2 class="rest-name">Barbeque</h2>
+                    <p class="rest-sortiment">Carne, gratar</p>
+                </a>
+                <a href="cofetaria-nnm.html" class="restaurante-item rest-div">
+                    <img src="img/cake.jpg" alt="Cafetaria NNM">
+                    <h2 class="rest-name">Cafetaria NNM</h2>
+                    <p class="rest-sortiment">Dulciuri</p>
+                </a>
+                <a href="brutaria-paine.html" class="restaurante-item rest-div">
+                    <img src="img/brutaria.jpg" alt="Brutaria paine">
+                    <h2 class="rest-name">Brutaria paine</h2>
+                    <p class="rest-sortiment">Paine</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <br>
+    <footer class="container">
+        <div class="socialize" id="contacts">
+            <form action="#email" id="email" autocomplete="off">
+                <input class="socialize_email" type="email" placeholder="Email pt noutati" name="Email for newsletter"
+                    required>
+                <button class="socialize_send" role="button" type="submit"><i class="fas fa-greater-than"></i></button>
+            </form>
+            <div class="socialize_social-cont">
+                <a href="https://www.facebook.com/CDPROJEKTRED/" aria-label="See our facebook page" rel="noreferrer"
+                    target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/witchergame" aria-label="See our twitter page" rel="noreferrer"
+                    target="_blank"> <i class="fab fa-twitter"></i></a>
+                <a href="www.google.com" aria-label="See our instagram page" rel="noreferrer" target="_blank"> <i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="copyrights">
+            <p class="copyrights_designed">Copyright &#169; Let's Eat 2019.</p>
+            <div class="copyrights_support">
+                <p>Support</p>
+                <p>Terms and Conditions</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
