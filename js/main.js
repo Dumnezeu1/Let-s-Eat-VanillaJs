@@ -55,7 +55,7 @@ function sortimentSelect() {
   const SortimentTitle = document.querySelectorAll(".sortim-title");
 
   for (let i = 0; i < SortimentTitle.length; i++) {
-    SortimentTitle[i].addEventListener("click", function () {
+    SortimentTitle[i].addEventListener("click", function() {
       const sortiment = document.querySelectorAll(".sortim");
       if (sortiment[i].style.display != "block") {
         sortiment[i].style.display = "block";
@@ -70,7 +70,7 @@ function sortimentSelectBar() {
   const SortimentBar = document.querySelectorAll(".restaurant-item");
 
   for (let i = 0; i < SortimentBar.length; i++) {
-    SortimentBar[i].addEventListener("click", function () {
+    SortimentBar[i].addEventListener("click", function() {
       const sortiment = document.querySelectorAll(".sortim");
       for (let all = 0; all < sortiment.length; all++)
         sortiment[all].style.display = "none";
@@ -148,7 +148,7 @@ function closeModal() {
   modal_detalii.style.display = "none";
 }
 
-window.addEventListener("click", function (event) {
+window.addEventListener("click", function(event) {
   const modal = document.querySelector("#myModal");
   const modal_detalii = document.querySelector("#detalii");
   if (event.target == modal) {
@@ -202,34 +202,33 @@ function addItemToCart(title, pret, detalii) {
   </div>
   <p class="produs-pret">${pret}</p>
   <div class="produs-cantitate">
-  <input class="produs-numar" value="1" type="number" />
+  <input class="produs-numar" onkeydown="return event.keyCode !== 69" value="1"  type="number" min="1" max="20"/>
   <button class="btn-remove" type="button">&times;</button>
   </div>`;
   cartitem.innerHTML = cartitemscont;
   cartContainer.appendChild(cartitem);
-  // localStorrage
-  localStorage.setItem("cartStorage", cartitemscont);
-  document.querySelectorAll(".cos-produs").innerHTML = localStorage.getItem(
-    "cartStorage"
-  );
   cartitem
     .getElementsByClassName("btn-remove")[0]
-    .addEventListener("click", removeButton);
+    .addEventListener("click", removeItem);
   cartitem
     .getElementsByClassName("produs-numar")[0]
-    .addEventListener("change", changeCantity);
+    .addEventListener("change", changeQuantity);
 }
 
-function removeButton(event) {
+function removeItem(event) {
   const buttonClicked = event.target;
   buttonClicked.parentNode.parentNode.remove();
   updateTotal();
 }
 
-function changeCantity(event) {
+function changeQuantity(event) {
   const input = event.target;
   if (isNaN(input.value) || input.value <= 0) {
     input.value = 1;
+  } else if (input.value > 20) {
+    input.value = 20;
+  } else if (input.value % 1 !== 0) {
+    input.value = parseInt(input.value);
   }
   updateTotal();
 }
@@ -350,7 +349,7 @@ function scrollNavbar() {
 
 const FooterSelect = document.querySelectorAll(".copyrights_support p");
 for (let i = 0; i < FooterSelect.length; i++)
-  FooterSelect[i].addEventListener("click", function () {
+  FooterSelect[i].addEventListener("click", function() {
     if ([i] == 0) alert("Contact us at 0782.322.321");
     if ([i] == 1) alert("Copyright Dumnezeu 2019");
   });
